@@ -32,6 +32,7 @@ public class Dino : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
             yVelocity = jumpSpeed * Vector2.up;
+            isGrounded = false;
         }
 
         transform.position += (Vector3)yVelocity * Time.deltaTime;
